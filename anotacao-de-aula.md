@@ -4,6 +4,7 @@
 - ALTER JOIN retorna todas as tabelas em integra
 - LEFT JOIN Retorna apenas a tabela 1 ou "a tablea a esquerda"
 - RIGTH JOIN retorna apenas a tabela 2 ou "a tabela a direita"
+- SELF JOIN compara a tabela com ela mesma
 - SQL union/intersect/except, tabelas devem possuir a mesma quantidade de colunas
 - union "junta as tabelas"
 

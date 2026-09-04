@@ -47,6 +47,31 @@ BEGIN
 END
 
 ````
+- Exemplo pratico
+````
+USE EMPRESA
+GO
+
+DECLARE @SALARIO DECIMAL (10, 2), @NOME VARCHAR(100), @DATA DATE, @SALARIO_MEDIO DECIMAL(10,2);
+
+SET @NOME = 'Jennifer';
+
+SELECT @SALARIO = F.Salario, @DATA = F.Datanasc
+FROM FUNCIONARIO AS F
+WHERE F.Pnome = @NOME
+
+SELECT @SALARIO_MEDIO = AVG(F.Salario)
+FROM FUNCIONARIO AS F
+
+PRINT 'O Funcionario(a) '+@NOME+' tem um salario de R$'+ CAST (@SALARIO AS VARCHAR(100)) + '. E nasceu em '+ CONVERT(VARCHAR(10), @DATA, 103);
+
+IF(@SALARIO>@SALARIO_MEDIO)
+	PRINT 'O funcionario '+@NOME+' ganha acima da média. Media = '+CAST (@SALARIO_MEDIO AS VARCHAR(100))
+ELSE
+	PRINT 'O funcionario '+@NOME+' ganha acima da média. Media = '+CAST (@SALARIO_MEDIO AS VARCHAR(100))
+
+GO
+````
 
 
 # 21/08

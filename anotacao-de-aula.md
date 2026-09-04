@@ -1,15 +1,15 @@
 # 04/09
 - Variaveis declaradas no banco
-´´´
+```
 DECLARE @VAR INT, @NOME VARCHAR(100);
 SET @VAR = 10;
 SELECT @NOME = F.nome
 FROM Funcionario AS F
 WHERE F.id = 1234
 CAST (@VAR*10 AS VARCHAR 100) AS Resultado;
-´´´
+```
 - Consulta de Funcionário
-´´´
+```
 USE EMPRESA
 GO
 
@@ -30,7 +30,7 @@ PRINT 'O Funcionario(a) ' + @NOME +
       '. E nasceu em ' + CONVERT(VARCHAR(10), @DATA, 103);
 
 GO
-´´´
+```
 
 # 21/08
 - **JOINS**

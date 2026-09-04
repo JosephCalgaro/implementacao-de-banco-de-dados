@@ -8,7 +8,7 @@ FROM Funcionario AS F
 WHERE F.id = 1234
 CAST (@VAR*10 AS VARCHAR 100) AS Resultado;
 ```
-- Consulta de Funcionário
+- Consulta de Funcionário com CAST e converção com CONVERT
 ```
 USE EMPRESA
 GO
@@ -31,6 +31,23 @@ PRINT 'O Funcionario(a) ' + @NOME +
 
 GO
 ```
+- Estrutura IF/ELSE em um banco de dados
+````
+DECLARE @IDADE INT;
+
+SET @IDADE = 20;
+
+IF @IDADE >= 18
+BEGIN
+    PRINT 'Maior de idade';
+END
+ELSE
+BEGIN
+    PRINT 'Menor de idade';
+END
+
+````
+
 
 # 21/08
 - **JOINS**

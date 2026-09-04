@@ -73,6 +73,19 @@ ELSE
 GO
 ````
 
+-Função IIF(CONDIÇÃO);__(VERDADE);__(FALSIDADE)) utilizada dentro do SELECT
+```
+USE EMPRESA
+
+
+SELECT 
+    F.Pnome,
+    F.Unome,
+    F.Salario,
+    IIF(F.Salario < 20000, 'Baixo', 'Alto') AS CATEGORIA
+FROM FUNCIONARIO AS F;
+```
+
 
 # 21/08
 - **JOINS**

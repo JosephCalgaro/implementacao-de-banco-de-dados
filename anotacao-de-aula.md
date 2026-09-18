@@ -1,3 +1,24 @@
+# 18/09
+- Procedures
+```
+CREATE PROCEDURE SP_NOME(@PARAM INT)
+AS
+BEGIN
+	BLOCO;
+END
+
+EXEC SP_NOME
+```
+- Funçoes
+```
+CREATE FUNCTION FN_NOME(@PARAM INT, @PARAM INT)
+RETURNS TIPO
+AS
+BEGIN
+	BLOCO;
+END
+```
+
 # 04/09
 - Variaveis declaradas no banco
 ```

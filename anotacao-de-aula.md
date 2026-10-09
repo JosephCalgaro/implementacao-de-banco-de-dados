@@ -1,3 +1,21 @@
+# 09/10
+-**ACID:**
+	- Atomicidade garante que uma transação é tratada como uma única unidade (não divisivel)
+	- Consistencia garante que uma transação leve o banco de um estado válido para outro estado válido
+	- Isolamento garante que as transações sejam executadas de forma isolada, sem que as operações de uma transação afetem as operações
+	- Durabilidade garante que uma vez confirmada, ela devera permanecer no banco
+-**Transações:**
+	- Garante segurança nas operações atravez de commits e rollbacks
+	
+````sql
+BEGIN TRANSACTION
+COMMIT TRANSACTION
+ROLLBACK TRANSACTION
+SAVEPOINT
+````
+
+
+
 # 18/09
 - Procedures
 ```

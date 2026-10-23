@@ -1,4 +1,5 @@
 # 23/10
+-função UPDATE() deleta uma informação e coloca outra
 - Sintaxe Trigger:
 ```sql
 CREATE TRIGGER trg_after_insert_dpt

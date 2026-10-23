@@ -1,5 +1,14 @@
 # 23/10
+- Sintaxe Trigger:
+```sql
+CREATE TRIGGER trg_after_insert_dpt
+ON DEPARTAMENTO
+AFTER INSERT
+AS
+BEGIN
 
+END
+```
 - Fluxo de Transações
 - **Tipos de Triggers:**
 	- After insert

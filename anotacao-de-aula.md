@@ -1,5 +1,46 @@
 # 23/10
--função UPDATE() deleta uma informação e coloca outra
+- pode ser feito com Instead of utilizando IF EXISTS
+- Sintaxe trigger para verificar se há nome repetido utilizando trigger after insert:
+  ```sql
+  CREATE OR ALTER TRIGGER trg_after_insert_dpt
+	ON DEPARTAMENTO
+	AFTER INSERT
+	AS
+	BEGIN
+	DECLARE @NOME VARCHAR(40);
+	SELECT @NOME = I.Dnome
+	FROM INSERTED AS I;
+
+	IF ((SELECT count(D.Dnome)FROM DEPARTAMENTO AS D WHERE D.Dnome = @NOME)>1)
+	BEGIN
+
+	ROLLBACK TRANSACTION
+	RAISERROR('Um departamento com esse nome ja existe', 16, 1) 
+	END
+	END;
+  ```
+- Função UPDATE() deleta uma informação e coloca outra
+```sql
+CREATE OR ALTER TRIGGER trg_for_update_none
+ON DEPARTAMENTO
+FOR UPDATE -- FOR = AFTER
+AS
+BEGIN
+	DECLARE @NOME_ANTIGO VARCHAR(40),
+			@NOME_NOVO VARCHAR(40);
+
+	SELECT @NOME_ANTIGO = D.Dnome FROM deleted AS D;
+	SELECT @NOME_NOVO = I.DNOME FROM inserted AS I;
+
+	IF UPDATE(DNOME)
+	BEGIN
+		PRINT 'O NOME ERA: '+ @NOME_ANTIGO
+		PRINT 'O NOVO NOME É: '+@NOME_NOVO
+	END
+	ELSE
+		PRINT 'O NOME NÃO FOI ALTERADO'
+END
+```
 - Sintaxe Trigger:
 ```sql
 CREATE TRIGGER trg_after_insert_dpt

@@ -1,8 +1,9 @@
 # 23/10
+
 - Fluxo de Transações
 - **Tipos de Triggers:**
-- After insert
-- Insted of
+	- After insert
+	- Insted of
 - Nem todo o trigger possui uma condição
 - Um trigger esta especificamente vinculado sobre atualização de dados no banco de dados (Create, insert, delete)
 - Evento-Condição-Ação (ECA) ligado a ativação de trigger

@@ -1,3 +1,13 @@
+# 23/10
+- Fluxo de Transações
+- **Tipos de Triggers:**
+- After insert
+- Insted of
+- Nem todo o trigger possui uma condição
+- Um trigger esta especificamente vinculado sobre atualização de dados no banco de dados (Create, insert, delete)
+- Evento-Condição-Ação (ECA) ligado a ativação de trigger
+- trigger é um tipo especial de stored procedure executado ao utilizar uma operação DML (data manipulation language)
+
 # 09/10
 -**ACID:**
 	- Atomicidade garante que uma transação é tratada como uma única unidade (não divisivel)
